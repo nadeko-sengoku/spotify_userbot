@@ -8,22 +8,27 @@
     "env": {
       "BOT_TOKEN": {
         "description": "Put your bot token.",
-        "required": true,
         "value": ""
       },
       "SPOTIFY_MODE": {
         "description": "Put True if you want spotify mode.",
-        "required": true,
         "value": "False"
       },
       "API_ID": {
         "description": "Put here your api_id.",
-        "required": true,
+        "value": ""
+      },
+      "API_HASH": {
+        "description": "Put here your hash.",
+        "value": ""
+      },
+      "SESSION_KEY": {
+        "description": "Put here your telethon session key https://meanii.me/session",
         "value": ""
       },
       "BOTLOG": {
         "description": "Put here True if you want log",
-        "required": true,
+        "required": false,
         "value": "True"
       },
       "LOG": {
@@ -32,10 +37,12 @@
         "value": ""
       },
       "SCREENSHOT_LAYER_ACCESS_KEY": {
-        "description": "put here screenshot layer"
+        "description": "put here screenshot layer",
+        "required": false
       },
       "OPEN_WEATHER_MAP_APPID": {
-        "description": "put here open weather ap api."
+        "description": "put here open weather ap api.",
+        "required": false
       }
     },
     "addons": [],
