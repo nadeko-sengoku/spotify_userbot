@@ -8,6 +8,7 @@
     "env": {
       "BOT_TOKEN": {
         "description": "Put your bot token.",
+        "required": false,
         "value": ""
       },
       "SPOTIFY_MODE": {
