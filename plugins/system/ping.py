@@ -10,7 +10,9 @@ import asyncio
 from datetime import datetime
 from telethon import events
 from __main__ import client
-from constants import CMD_PREFIX, LOG
+from constants import Config
+
+CMD_PREFIX = Config.CMD_PREFIX
 
 
 @client.on(events.NewMessage(outgoing=True, pattern=CMD_PREFIX + "ping"))

@@ -16,8 +16,11 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.functions.channels import LeaveChannelRequest
 from telethon import events
 from __main__ import client, bot
-from constants import CMD_PREFIX , LOG, BOTLOG
+from constants import Config
 
+CMD_PREFIX = Config.CMD_PREFIX
+LOG = Config.LOG
+BOTLOG = Config.BOTLOG
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`The image is too small`"
 PP_ERROR = "`Failure while processing image`"

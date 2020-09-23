@@ -2,8 +2,11 @@ import asyncio
 from telethon.errors import rpcbaseerrors
 from telethon import events
 from __main__ import client, bot
-from constants import CMD_PREFIX, LOG, BOTLOG
+from constants import Config
 
+CMD_PREFIX = Config.CMD_PREFIX
+LOG = Config.LOG
+BOTLOG = Config.BOTLOG
 
 
 @client.on(events.NewMessage(outgoing=True, pattern=CMD_PREFIX + "purge$"))

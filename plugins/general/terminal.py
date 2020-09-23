@@ -1,13 +1,14 @@
 from __main__ import client
-from constants import CMD_PREFIX
 from telethon import events
 
 import asyncio
 from getpass import getuser
 from os import remove
+from constants import Config
 
+CMD_PREFIX  = Config.CMD_PREFIX
 
-@client.on(events.NewMessage(outgoing=True, pattern=r"^\.term(?: |$)(.*)"))
+@client.on(events.NewMessage(outgoing=True, pattern=r"^\?term(?: |$)(.*)"))
 async def terminal_runner(term):
     """ For .term command, runs bash commands and scripts on your server. """
     from os import geteuid

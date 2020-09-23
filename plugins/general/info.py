@@ -5,7 +5,10 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 from __main__ import client
-from constants import CMD_PREFIX
+from constants import Config
+
+CMD_PREFIX = Config.CMD_PREFIX
+
 
 
 @client.on(events.NewMessage(outgoing=True, pattern=CMD_PREFIX + "info ?(.*)"))

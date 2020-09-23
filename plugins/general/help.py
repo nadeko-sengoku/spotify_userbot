@@ -1,7 +1,23 @@
 from telethon import events
 from __main__ import client
-from constants import CMD_PREFIX
+from constants import Config
 
+CMD_PREFIX  = Config.CMD_PREFIX
+
+if Config.SPOTIFY_MODE:
+    spotif_mode_help = """
+    `{CMD}alive`: to check the status.
+    `{CMD}me`: Get Current User's Profile
+    `{CMD}bio`: to check bio.
+    `{CMD}resetbio`:  To set the initial bio.
+    `{CMD}song`: to share the song's link which you're listening to on Spotify.
+    `{CMD}getsong`: to get current playing song's file(mp3).
+    `{CMD}recently`: Get the Current User's Recently Played Tracks.
+    `{CMD}lyrics`: to get song lyrics
+    **Usage**> __Duman - Haberin Yok Ölüyorum__.  
+    """
+else:
+    spotif_mode_help = "__Spotify_mode: False__"
 @client.on(events.NewMessage(outgoing=True, pattern=CMD_PREFIX + "help"))
 async def help(event):
     CMD = CMD_PREFIX[1:]
@@ -9,15 +25,7 @@ async def help(event):
 **Currently available commands**
 
 **Spotify commands**
-`{CMD}alive`: to check the status.
-`{CMD}me`: Get Current User's Profile
-`{CMD}bio`: to check bio.
-`{CMD}resetbio`:  To set the initial bio.
-`{CMD}song`: to share the song's link which you're listening to on Spotify.
-`{CMD}getsong`: to get current playing song's file(mp3).
-`{CMD}recently`: Get the Current User's Recently Played Tracks.
-`{CMD}lyrics`: to get song lyrics
-**Usage**> __Duman - Haberin Yok Ölüyorum__.
+{spotif_mode_help}
 
 **General commands**
 `{CMD}info`: Get Telegram Profile Picture and other information.
@@ -51,10 +59,15 @@ async def help(event):
 `{CMD}sd <x> <msg>`: Create a message that self-destructs in x seconds.
 __Keep the seconds under 100 since it puts your bot to sleep.__
 
+**HeXa Commands**
+`{CMD}hexa 'times_hunt' 'set_sec'`: For hunting.
+eg. {CMD}hexa 50000 5
+
 **System commands**
 `{CMD}ping`: to check the ping.
 `{CMD}speedtest` __text|image|file(default)__: get server speed result.
 `{CMD}restart`: to restart the bot.
 
+Join channel: @spookyanii
     """
     await event.edit(help_panel,link_preview=True)

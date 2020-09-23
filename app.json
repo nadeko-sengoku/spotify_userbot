@@ -1,0 +1,47 @@
+{
+    "name": "Spotify userbot ",
+    "description": "This userbot updates the biography of a telegram user according to their current spotify playback.",
+    "logo": "https://telegra.ph/file/086c947c7dd0f9797e764.jpg",
+    "repository": "https://github.com/anilchauhanxda/spotify_userbot",
+    "website": "https://meanii.me",
+    "success_url": "https://t.me/spookyanii",
+    "env": {
+      "BOT_TOKEN": {
+        "description": "Put your bot token.",
+        "required": true,
+        "value": ""
+      },
+      "SPOTIFY_MODE": {
+        "description": "Put True if you want spotify mode.",
+        "required": true,
+        "value": "False"
+      },
+      "API_ID": {
+        "description": "Put here your api_id.",
+        "required": true,
+        "value": ""
+      },
+      "BOTLOG": {
+        "description": "Put here True if you want log",
+        "required": true,
+        "value": "True"
+      },
+      "LOG": {
+        "description": "Put here channel id -  (not usernames).",
+        "required": false,
+        "value": ""
+      },
+      "SCREENSHOT_LAYER_ACCESS_KEY": {
+        "description": "put here screenshot layer"
+      },
+      "OPEN_WEATHER_MAP_APPID": {
+        "description": "put here open weather ap api."
+      }
+    },
+    "addons": [],
+    "buildpacks": [
+      {
+        "url": "heroku/python"
+      }
+    ]
+  }

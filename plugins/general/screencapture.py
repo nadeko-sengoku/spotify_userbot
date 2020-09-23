@@ -3,8 +3,11 @@ import os
 from requests import get
 
 from __main__ import client
-from constants import CMD_PREFIX, SCREENSHOT_LAYER_ACCESS_KEY
 from telethon import events
+from constants import Config
+
+CMD_PREFIX = Config.CMD_PREFIX
+SCREENSHOT_LAYER_ACCESS_KEY = Config.SCREENSHOT_LAYER_ACCESS_KEY
 
 
 @client.on(events.NewMessage(outgoing=True, pattern=CMD_PREFIX + "sc (.*)"))

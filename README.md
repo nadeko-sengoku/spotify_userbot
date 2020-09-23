@@ -1,6 +1,9 @@
 # spotify_userbot 
 >This userbot updates the biography of a telegram user according to their current spotify playback. If no playback is active, the bot changes the bio back to the original one from the user. 
 
+# Deploy to heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 - Jump to [Setup](#setup)
 
 ## Plugins <a name = "plugins"></a>

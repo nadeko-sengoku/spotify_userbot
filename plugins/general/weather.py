@@ -4,9 +4,11 @@ import time
 from datetime import tzinfo, datetime
 
 from __main__ import client
-from constants import CMD_PREFIX, OPEN_WEATHER_MAP_APPID
 from telethon import events
+from constants import Config
 
+CMD_PREFIX  = Config.CMD_PREFIX
+OPEN_WEATHER_MAP_APPID = Config.OPEN_WEATHER_MAP_APPID
 
 @client.on(events.NewMessage(outgoing=True, pattern=CMD_PREFIX + "weather (.*)"))
 async def _(event):

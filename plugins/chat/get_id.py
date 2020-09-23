@@ -1,7 +1,9 @@
 from telethon import events
 from telethon.utils import pack_bot_file_id
 from __main__ import client
-from constants import CMD_PREFIX
+from constants import Config
+
+CMD_PREFIX = Config.CMD_PREFIX
 
 @client.on(events.NewMessage(outgoing=True, pattern=CMD_PREFIX + "id"))
 async def _(event):

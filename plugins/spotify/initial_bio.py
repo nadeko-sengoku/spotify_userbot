@@ -4,9 +4,12 @@ from telethon.tl.functions.account import (UpdateProfileRequest,
 
 from telethon import events
 from __main__ import client, bot
-from constants import CMD_PREFIX, LOG, INITIAL_BIO, BOTLOG
+from constants import Config
 
-
+CMD_PREFIX = Config.CMD_PREFIX
+LOG = Config.LOG
+BOTLOG = Config.BOTLOG
+INITIAL_BIO = Config.INITIAL_BIO
 
 @client.on(events.NewMessage(outgoing=True, pattern=CMD_PREFIX + "resetbio?(.*)"))
 async def set_biograph(setbio):

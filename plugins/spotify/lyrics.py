@@ -2,7 +2,9 @@ from telethon import events
 import asyncio
 from PyLyrics import *
 from __main__ import client
-from constants import CMD_PREFIX
+from constants import Config
+
+CMD_PREFIX = Config.CMD_PREFIX
 
 
 @client.on(events.NewMessage(outgoing=True, pattern=CMD_PREFIX + "lyrics (.*)"))
